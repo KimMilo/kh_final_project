@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "mybatis-3-mapper.dtd" >
+<mapper namespace="temp">
+
+  <select id="memberList" resultType="mdto">
+  	select * from personal_member
+  </select>
+  
+  
+  <select id="boardList" resultType="bdto">
+  	select * from test_board
+  </select>
+  
+  <select id="applyProcessList" resultType="apdto">
+  	select * from BUSINESS_APPLY_PROCESS
+  </select>
+  
+  <select id="logincheck" resultType="pdto">
+  SELECT USER_ID, USER_PW, USER_ROLE
+  FROM USER_TABLE WHERE USER_ID =#{userId}
+  </select>
+  
+</mapper>
